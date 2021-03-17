@@ -1,0 +1,32 @@
+options {
+        directory "/var/cache/bind";
+
+        // Port d'échange entre les serveurs DNS
+        query-source address * port *;
+
+        // Transmettre les requêtes à 192.168.1.1 si ce serveur ne sait pas résoudre ces adresses.
+        // On pourrait aussi bien renseigner les serveurs DNS du FAI plutôt que de renseigner
+        // l'adresse IP du routeur (xxxbox)
+        forward only;
+        forwarders { 192.168.1.1; };
+
+        auth-nxdomain no;    # conform to RFC1035
+
+        // À partir de 9.9.5 ARM, désactiver le scan des interfaces pour éviter l'arrêt inopiné de l'écoute
+        interface-interval 0;
+        // Ecouter sur les interfaces locales uniquement (IPV4)
+        listen-on-v6 { none; };
+        listen-on { 127.0.0.1; 192.168.0.1; };
+
+        // Ne pas transférer les informations de zones aux DNS secondaires
+        allow-transfer { none; };
+
+        // Accepter les requêtes pour le réseau interne uniquement
+        allow-query { internals; };
+
+        // Autoriser les requêtes récursives pour les hôtes locaux
+        allow-recursion { internals; };
+
+        // Ne pas rendre publique la version de BIND
+        version none;
+};
