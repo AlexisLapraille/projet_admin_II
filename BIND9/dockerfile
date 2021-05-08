@@ -32,5 +32,5 @@ CMD named -g
 
 #Commandes pour monter le dockerfile
 # docker build -t dns .
-# docker tag dns mathisdory/projet-admin-2:dns
+# docker tag dns AlexisLapraille/projet-admin-2:dns
 # docker run -tdp 53:53 -v "$(pwd)/config:/etc/bind" <image>
