@@ -1,4 +1,6 @@
-zone "l1-3.ephec-ti.be" {
+// Ajout d'une zone DNS à BIND9 pour le transformer en serveur maitre primaire
+
+zone "m1-4.ephec-ti.be" {
     type master;
-    file "/etc/bind/zones/db.l1-3.ephec-ti.be";
+    file "/etc/bind/zones/db.m1-4.ephec-ti.be";
 };

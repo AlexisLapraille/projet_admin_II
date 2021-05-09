@@ -10,7 +10,7 @@ RUN apt-get install -y dnsutils
 RUN apt-get install -y bind9utils
 RUN apt-get install -y bind9-doc
 
-# Copie nos fichiers de configuration
+# Copie de nos fichiers de configuration
 COPY named.conf /etc/bind/
 COPY named.conf.options /etc/bind/
 COPY named.conf.local /etc/bind/
