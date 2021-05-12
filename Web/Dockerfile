@@ -6,7 +6,7 @@ RUN apt update
 RUN apt upgrade -y 
 
 # Installation de PHP
-RUN apt-get install -y php libapache2-mod-php php-mysqlµ
+RUN apt-get install -y php libapache2-mod-php php-mysql
 
 # Création des répertoires Apache
 RUN mkdir /usr/local/apache2/htdocs/www
