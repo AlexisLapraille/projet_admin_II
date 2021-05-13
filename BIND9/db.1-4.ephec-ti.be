@@ -9,15 +9,14 @@ $TTL 86400                   ; default time to live
         86400       ; Min TTL
         )
 
+1-4.ephec-ti.be.   	IN      NS      ns.1-4.ephec-ti.be.
 @       IN      NS      ns.1-4.ephec-ti.be.
 @       IN      MX      10 mail.1-4.ephec-ti.be.
-@	    IN      A       192.168.30.2
-@	    IN      A       135.125.101.243
+@       IN      A       135.125.101.243
 
 
 ns      IN     A        135.125.101.243
-www     IN     A        192.168.30.3
 www     IN     A        135.125.101.243
-b2b     IN     CNAME    www
-mail   IN     A         192.168.30.5
+b2b     IN     A        135.125.101.243
 mail   IN     A         135.125.101.243
+voip    IN     A        135.125.101.243        

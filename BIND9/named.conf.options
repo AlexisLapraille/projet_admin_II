@@ -3,7 +3,7 @@ options {
 	directory "/var/cache/bind";
 	
 	querylog yes;
-
+	listen-on port 53 { any; };
 	listen-on { any; };
 	allow-query { any; };
 
