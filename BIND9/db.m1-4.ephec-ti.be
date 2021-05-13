@@ -1,7 +1,7 @@
-$ORIGIN m1-4.ephec-ti.be.     ;designates the start of this zone file in the namespace
+$ORIGIN 1-4.ephec-ti.be.     ;designates the start of this zone file in the namespace
 $TTL 86400                   ; default time to live
 
-@ IN SOA ns.m1-4.ephec-ti.be. admin.m1-4.ephec-ti.be. (
+@ IN SOA ns.1-4.ephec-ti.be. admin.1-4.ephec-ti.be. (
         2021032801  ; serial number
         21600       ; Refresh
         3600        ; Retry
@@ -9,8 +9,8 @@ $TTL 86400                   ; default time to live
         86400       ; Min TTL
         )
 
-@       IN      NS      ns.m1-4.ephec-ti.be.
-@       IN      MX      10 mail.m1-4.ephec-ti.be.
+@       IN      NS      ns.1-4.ephec-ti.be.
+@       IN      MX      10 mail.1-4.ephec-ti.be.
 @	    IN      A       192.168.30.2
 @	    IN      A       135.125.101.243
 
