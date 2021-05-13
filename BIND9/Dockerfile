@@ -16,7 +16,7 @@ COPY named.conf.options /etc/bind/
 COPY named.conf.local /etc/bind/
 COPY named.conf.default-zones /etc/bind/
 COPY named.conf.log /etc/bind/
-COPY db.m1-4.ephec-ti.be /etc/bind/
+COPY db.m1-4.ephec-ti.be /etc/bind/zones/
 
 # Ouverture du port 53 en UDP/TCP
 EXPOSE 53/udp

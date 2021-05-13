@@ -20,8 +20,8 @@ options {
 	// 	0.0.0.0;
 	//};
 
-	dnssec-enable yes;
-  	dnssec-validation auto;
+	//dnssec-enable yes;
+  	//dnssec-validation auto;
   	//dnssec-lookaside auto;
 
 	
