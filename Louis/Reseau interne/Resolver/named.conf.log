@@ -1,0 +1,10 @@
+ logging {
+    channel querylog{
+        file "/var/log/querylog";
+        severity debug 10;
+        print-category yes;
+        print-time yes;
+        print-severity yes;
+    };
+    category queries { querylog;};
+};

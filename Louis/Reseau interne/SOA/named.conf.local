@@ -1,0 +1,11 @@
+// Ajout d'une zone DNS à BIND9 pour le transformer en serveur maitre primaire
+
+zone "woodytoys.intern" IN { 
+	type master;                                                            
+	file "/etc/bind/master/woodytoys.intern";                                    
+};
+
+zone "128.16.172.in-addr.arpa" IN {                                                       
+        type master;                                                            
+        file "/etc/bind/master/128.16.172.in-addr.arpa";                                  
+};

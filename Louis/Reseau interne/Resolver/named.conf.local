@@ -1,0 +1,13 @@
+// Ajout d'une zone DNS à BIND9 pour le transformer en serveur maitre primaire
+
+zone "woodytoys.intern" {                                                                                                                                                              
+    type forward;                                                                                                                                                           
+    forwarders { 172.16.128.2; };                                                                                                                                            
+    forward only;                                                                                                                                                           
+};                                                                                                                                                                          
+                                                                                                                                                                                    
+zone "128.16.172.in-addr.arpa" {                                                                                                                                                     
+    type forward;                                                                                                                                                           
+    forwarders { 172.16.128.2; };                                                                                                                                            
+    forward only;                                                                                                                                                           
+};  
