@@ -1,7 +1,7 @@
 $TTL 86400; 24 hours could have been written as 24h or 1d
-$ORIGIN 128.16.172.IN-ADDR.ARPA.
+$ORIGIN 2.16.172.IN-ADDR.ARPA.
 
-@        IN     SOA     ns.woodytoys.intern.        maxime.woodytoys.intern (
+@        IN     SOA     ns.woodytoys.intern.        louis.woodytoys.intern (
                         1       ; Serial
                         604800  ; refresh
                         86400   ; Retry
@@ -11,6 +11,6 @@ $ORIGIN 128.16.172.IN-ADDR.ARPA.
         IN      NS      ns.woodytoy.intern.
 
 ; Reverse dns
-2       IN      PTR     ns.woodytoys.intern.
-3       IN      PTR     resolv.woodytoys.intern.
-4       IN      PTR     erp.woodytoys.intern.
+1       IN      PTR     ns.woodytoys.intern.
+2       IN      PTR     resolv.woodytoys.intern.
+3       IN      PTR     erp.woodytoys.intern.

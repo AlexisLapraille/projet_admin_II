@@ -1,0 +1,1 @@
+docker run -it --rm -d --network reseau-intern --ip 172.16.2.2 --name resolv loulou42/resolver-adminproject

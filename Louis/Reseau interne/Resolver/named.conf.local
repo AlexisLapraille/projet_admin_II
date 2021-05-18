@@ -2,12 +2,18 @@
 
 zone "woodytoys.intern" {                                                                                                                                                              
     type forward;                                                                                                                                                           
-    forwarders { 172.16.128.2; };                                                                                                                                            
+    forwarders { 172.16.2.1; };                                                                                                                                            
     forward only;                                                                                                                                                           
 };                                                                                                                                                                          
                                                                                                                                                                                     
-zone "128.16.172.in-addr.arpa" {                                                                                                                                                     
+zone "2.16.172.in-addr.arpa" {                                                                                                                                                     
     type forward;                                                                                                                                                           
-    forwarders { 172.16.128.2; };                                                                                                                                            
+    forwarders { 172.16.2.1; };                                                                                                                                            
     forward only;                                                                                                                                                           
 };  
+
+zone "m1-4.ephec-ti.be" {                                                                                                                                                              
+    type forward;                                                                                                                                                           
+    orwarders { 172.168.1.1; };                                                                                                                                            
+    forward only;                                                                                                                                                           
+}; 

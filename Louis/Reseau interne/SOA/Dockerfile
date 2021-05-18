@@ -19,7 +19,7 @@ RUN mkdir /etc/bind/master
 
 
 COPY ./master/woodytoys.intern /etc/bind/master/woodytoys.intern
-COPY ./master/128.16.172.in-addr.arpa /etc/bind/master/128.16.172.in-addr.arpa
+COPY ./master/2.16.172.in-addr.arpa /etc/bind/master/2.16.172.in-addr.arpa
 #COPY ./test.log /etc/bind/test.log
 
 # Lancement du service dns 

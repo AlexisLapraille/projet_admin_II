@@ -24,8 +24,8 @@ options {
 	version "not currently available";
 	recursion yes;
 	dnssec-validation no;
-
-	allow-recursion { 127.0.0.1; 172.16.0.0/16; 10.10.10.0/24; };
+	//changer supprimer le 172.168 après
+	allow-recursion { 127.0.0.1; 172.16.0.0/16; 10.10.10.0/24; 172.168.0.0/16 };
 	querylog yes;
 
 

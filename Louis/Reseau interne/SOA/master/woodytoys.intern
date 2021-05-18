@@ -10,10 +10,10 @@ $TTL 604800
 woodytoys.intern.  IN      NS       ns.woodytoys.intern.
 
 ; A record for name server
-ns              IN      A       172.16.128.2  
+ns              IN      A       172.16.2.1  
 
 ; Resolver
-resolv          IN      A       172.16.128.3  
+resolv          IN      A       172.16.2.2 
 
 ; A record for erp
-erp             IN      A       172.16.128.4 
+erp             IN      A       172.16.2.3 

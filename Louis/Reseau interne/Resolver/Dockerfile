@@ -11,12 +11,9 @@ RUN apt-get install -y bind9utils
 RUN apt-get install -y bind9-doc
 
 # Copie de nos fichiers de configuration
-COPY named.conf /etc/bind/named.conf
 COPY named.conf.options /etc/bind/named.conf.options
 COPY named.conf.local /etc/bind/named.conf.local
-COPY named.conf.log /etc/bind/named.conf.log
 
-RUN touch /var/log/querylog
 
 # Lancement du service dns 
 CMD named -c /etc/bind/named.conf -g
