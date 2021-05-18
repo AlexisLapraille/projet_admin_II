@@ -1,4 +1,4 @@
-From ubuntu:trusty
+FROM ubuntu:trusty
 
 # Set noninteractive mode for apt-get
 ENV DEBIAN_FRONTEND noninteractive
