@@ -24,4 +24,11 @@ dig @135.125.101.243 ns.m1-4.ephec-ti.be
 dig -t SOA m1-4.ephec-ti.be
 dig -t NS m1-4.ephec-ti.be
 dig -t MX m1-4.ephec-ti.be
+
+//checker les zones
+
+named-checkzone [zonename] [filename]
+named-checkzone ubuntu-fr.lan /etc/bind/db.ubuntu-fr.lan
+named-checkzone 1.168.192.in-addr.arpa /etc/bind/db.192
+
 ```
