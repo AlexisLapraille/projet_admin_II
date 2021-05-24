@@ -16,7 +16,8 @@
 `docker push loulou42/apache-adminproject`
 
 1. Run image : 
-`docker run -it --rm -d -p 80:80 --network dmz --ip 172.168.0.4 --name web-extern loulou42`
+`docker run -it --rm -d -p 80:80 --network dmz --ip 172.168.0.4 --name web-extern loulou42/apache-adminproject`
+ docker run -it --rm -d -p 80:80 -p 443:443 --network dmz --ip 172.168.0.4 --name web-extern loulou42/apache-adminproject
 
 ## Lien vers le site web : http://www.m1-4.ephec-ti.be./ et http://b2b.m1-4.ephec-ti.be./
 
