@@ -1,6 +1,6 @@
 services:
     web_publique: 
-        image: web-extern:lastest
+        image: .
         restart: always
         ports: 
             - "80:80"
