@@ -1,6 +1,6 @@
 services:
     web_publique: 
-        image: .
+        image: nginx
         restart: always
         ports: 
             - "80:80"
