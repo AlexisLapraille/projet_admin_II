@@ -1,0 +1,34 @@
+services:
+    web_publique: 
+        image: adminprojet123/web_public:https_test
+        restart: always
+        ports: 
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./nginx/logs/nginx.log:/etc/nginx/main_access.log
+            - ./certbot/conf:/etc/nginx/ssl
+            - ./certbot/data:/var/www/certbot
+        networks:
+            default:
+                ipv4_address: 172.16.0.4
+        command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+    php:
+        image: adminprojet123/php_service:latest
+        networks:
+            default:
+                ipv4_address: 172.16.0.9
+
+    certbot:
+        image: certbot/certbot:latest
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+        volumes:
+            - ./certbot/conf:/etc/letsencrypt
+            - ./certbot/logs:/var/log/letsencrypt
+            - ./certbot/data:/var/www/certbot
+
+networks:
+    default:
+        external:
+            name: dmz

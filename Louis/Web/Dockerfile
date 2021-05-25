@@ -18,7 +18,7 @@ RUN apt-get install -y php libapache2-mod-php php-mysql
 RUN apt-get -y install openssl
 RUN apt-get update -y && apt-get install -y nano vim
 RUN apt-get install -y dnsutils net-tools iputils-ping
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /usr/local/apache2/conf/server.key -out /usr/local/apache2/conf/server.crt -subj "/C=BE/ST=Braban-wallon/L=Louvain-La-Neuve"
+#RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /usr/local/apache2/conf/server.key -out /usr/local/apache2/conf/server.crt -subj "/C=BE/ST=Braban-wallon/L=Louvain-La-Neuve/O=Ephec/OU=IT/CN=www.m1-4.ephec-ti.be"
 
 
 EXPOSE 80
