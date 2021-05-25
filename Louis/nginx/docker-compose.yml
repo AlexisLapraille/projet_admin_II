@@ -1,6 +1,6 @@
 services:
     web_publique: 
-        image: adminprojet123/web_public:https_test
+        image: web-extern:lastest
         restart: always
         ports: 
             - "80:80"
