@@ -10,4 +10,4 @@ RUN mkdir /etc/nginx/html/www
 COPY ./site/b2b/index.php /etc/nginx/html/b2b/index.php
 COPY ./site/www/index.html /etc/nginx/html/www/index.html
 
-COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./config/nginx.conf /etc/nginx/nginx.conf
