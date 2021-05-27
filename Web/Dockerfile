@@ -16,7 +16,9 @@ RUN mkdir /usr/local/apache2/htdocs/b2b
 
 # Ouverture du port 80 d'Apache
 EXPOSE 80
+EXPOSE 443
 
 COPY site/www/index.html /usr/local/apache2/htdocs/www
 COPY site/b2b/index.php /usr/local/apache2/htdocs/b2b
 COPY config/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY config/httpd-ssl.conf /usr/local/apache2/conf/extra/httpd-ssl.conf

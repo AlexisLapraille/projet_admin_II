@@ -1,18 +1,18 @@
 services:
-    web_publique: 
+    web_extern: 
         image: loulou42/apache-adminproject
         restart: always
         ports: 
             - "80:80"
             - "443:443"
         volumes:
-            - ./nginx/logs/nginx.log:/etc/nginx/main_access.log
-            - ./certbot/conf:/etc/nginx/ssl
+            - ./apache/logs/apache.log:/usr/local/apache2/error/access.log
+            - ./certbot/conf:/usr/local/apache2/conf
             - ./certbot/data:/var/www/certbot
         networks:
             default:
                 ipv4_address: 172.16.0.4
-        command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+        command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; apache2 -s reload; done & apache2 -g \"daemon off;\"'"
 
     certbot:
         image: certbot/certbot:latest
@@ -20,7 +20,7 @@ services:
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/logs:/var/log/letsencrypt
-            - ./certbot/data:/var/www/certbot
+            - ./certbot/data:/var/www/certbot 
 
 networks:
     default:
