@@ -9,7 +9,7 @@ COPY index.html /var/www/html/index.html
 COPY index.php /var/www/html/b2b/index.php
 
 #RUN apt install libapache2-mod-php -y
-RUN apt-get update && apt-get dist-upgrade
+#RUN apt-get update && apt-get dist-upgrade
 RUN a2enmod headers
 #RUN a2enmod php7.2
 #RUN systemctl restart apache2
