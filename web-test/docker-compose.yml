@@ -11,7 +11,7 @@ services:
             - "80:80"
             - "443:443"
         networks:
-            dmz:
+            default:
                 ipv4_address: 172.16.0.4
         environment:
             LETS_ENCRYPT_EMAIL: "he201881@students.ephec.be"
