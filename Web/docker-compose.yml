@@ -1,3 +1,4 @@
+version: '2'
 services:
     web_publique: 
         image: loulou42/apache-adminproject
@@ -21,7 +22,6 @@ services:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/logs:/var/log/letsencrypt
             - ./certbot/data:/var/www/certbot 
-
 networks:
     default:
         external:
