@@ -8,8 +8,11 @@ COPY b2b.conf /etc/apache2/sites-enabled/b2b.conf
 COPY index.html /var/www/html/index.html
 COPY index.php /var/www/html/b2b/index.php
 
-#RUN apt install libapache2-mod-php -y
-#RUN apt-get update && apt-get dist-upgrade
 RUN a2enmod headers
+
+#RUN apt-get update -y &&  apt-get dist-upgrade -y
+
+#RUN apt install libapache2-mod-php -y
+
 #RUN a2enmod php7.2
-#RUN systemctl restart apache2
+#RUN service apache2 restart
