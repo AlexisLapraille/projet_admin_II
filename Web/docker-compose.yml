@@ -13,7 +13,7 @@ services:
         networks:
             default:
                 ipv4_address: 172.16.0.4
-        command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; apache2ctl -s reload; done & apache2ctl -g \"daemon off;\"'"
+        command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; apache2ctl -s reload; done & apache2ctl -g;'"
 
     certbot:
         image: certbot/certbot:latest
