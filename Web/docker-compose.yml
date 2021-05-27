@@ -1,6 +1,6 @@
 services:
     web_publique: 
-        image: web
+        image: loulou42/apache-adminproject
         restart: always
         ports: 
             - "80:80"
