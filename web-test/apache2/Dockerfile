@@ -1,4 +1,7 @@
 FROM enoniccloud/apache2-letsencrypt
+
+RUN apt update 
+RUN apt upgrade -y 
 RUN apt-get install -y php libapache2-mod-php php-mysql
 
 
