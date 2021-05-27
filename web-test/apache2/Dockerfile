@@ -1,6 +1,6 @@
 FROM enoniccloud/apache2-letsencrypt
 
-RUN apt-get -y update libapache2-mod-php --fix-missing
+RUN apt install -y libapache2-mod-php
 
 
 COPY apache2.conf /etc/apache2/apache2.conf
