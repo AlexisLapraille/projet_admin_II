@@ -1,4 +1,4 @@
-FROM enoniccloud/apache2-letsencrypt
+FROM loulou42/apache-adminproject
 
 
 
