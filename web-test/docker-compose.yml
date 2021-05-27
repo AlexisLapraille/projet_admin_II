@@ -1,20 +1,28 @@
 version: '3'
 services:
-...
-  apache2:
-    image: loulou42\apache-adminproject
-    hostname: m1-4.ephec-ti.be
-    restart: always
-    volumes:
-      - etcletsencrypt:/etc/letsencrypt
-      - varletsencrypt:/var/lib/letsencrypt
-    ports:
-      - "80:80"
-      - "443:443"
-    environment:
-      LETS_ENCRYPT_EMAIL: "he201881@students.ephec.be"
-      LETS_ENCRYPT_DOMAINS: "m1-4.ephec-ti.be,www.m1-4.ephec-ti.be,b2b.m1-4.ephec-ti.be"
-...
+    apache2:
+        build: ./apache2
+        hostname: m1-4.ephec-ti.be
+        restart: always
+        volumes:
+            - etcletsencrypt:/etc/letsencrypt
+            - varletsencrypt:/var/lib/letsencrypt
+        ports:
+            - "80:80"
+            - "443:443"
+        networks:
+            dmz:
+                ipv4_address: 172.16.0.4
+        environment:
+        LETS_ENCRYPT_EMAIL: "he201881@students.ephec.be"
+        LETS_ENCRYPT_DOMAINS: "m1-4.ephec-ti.be,www.m1-4.ephec-ti.be,b2b.m1-4.ephec-ti.be"
+        container_name: web
+
 volumes:
-  varletsencrypt:
-  etcletsencrypt:
+    varletsencrypt:
+    etcletsencrypt:
+
+networks:
+    default:
+        external:
+            name: dmz
