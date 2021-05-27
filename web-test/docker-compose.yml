@@ -14,8 +14,8 @@ services:
             dmz:
                 ipv4_address: 172.16.0.4
         environment:
-        LETS_ENCRYPT_EMAIL: "he201881@students.ephec.be"
-        LETS_ENCRYPT_DOMAINS: "m1-4.ephec-ti.be,www.m1-4.ephec-ti.be,b2b.m1-4.ephec-ti.be"
+            LETS_ENCRYPT_EMAIL: "he201881@students.ephec.be"
+            LETS_ENCRYPT_DOMAINS: "m1-4.ephec-ti.be,www.m1-4.ephec-ti.be,b2b.m1-4.ephec-ti.be"
         container_name: web
 
 volumes:
