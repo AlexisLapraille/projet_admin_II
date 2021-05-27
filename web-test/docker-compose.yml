@@ -2,7 +2,7 @@ version: '3'
 services:
 ...
   apache2:
-    build: .
+    build: ./apache2
     hostname: m1-4.ephec-ti.be
     restart: always
     volumes:
