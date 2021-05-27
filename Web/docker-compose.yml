@@ -1,5 +1,5 @@
 services:
-    web_extern: 
+    web_publique: 
         image: loulou42/apache-adminproject
         restart: always
         ports: 
