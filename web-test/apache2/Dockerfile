@@ -1,4 +1,6 @@
 FROM enoniccloud/apache2-letsencrypt
+RUN apt-get install -y php libapache2-mod-php php-mysql
+
 
 COPY apache2.conf /etc/apache2/apache2.conf
 COPY myvhost.conf /etc/apache2/sites-enabled/myvhost.conf
