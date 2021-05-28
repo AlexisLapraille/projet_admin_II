@@ -1,6 +1,15 @@
-<-- Créer et lancer iamge docker -->
-docker build -t bdd .
-docker run -it --rm -d -p 3306:3306 --network test-reseau --ip 172.16.128.10 --name bdd bdd
+
+# Commande utile
+
+1. Créer et lancer iamge docker
+`docker build -t db .`
+
+1. Run l'image
+`docker run -it --rm -d -p 3306:3306 --network test-reseau --ip 172.16.128.10 --name db loulou42\db-adminproject`
+
+
+
+
 
 docker network connect --ip 172.16.129.10 zone_dmz bdd
 docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' bdd
