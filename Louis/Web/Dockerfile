@@ -13,6 +13,7 @@ RUN apt upgrade -y
 # Installation de PHP
 RUN apt-get install -y php libapache2-mod-php php-mysql
 
+
 # Création des répertoires Apache
 
 RUN apt-get -y install openssl
